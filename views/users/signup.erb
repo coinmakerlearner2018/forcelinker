@@ -1,0 +1,32 @@
+<h1>Welcome to the wonderland of the crazy one</h1>
+
+<%if @repeat_user_name == true || @repeat_user_email == true || @user_password_inconsistent == true %>
+
+<% if @repeat_user_name == true %>
+<%= "Your user name is same as other crazy one " %>
+<% end%>
+<%if @repeat_user_email == true %>
+<%= "Your Email is same as other crazy one "%>
+<% end %>
+<%if params[:user_password] == params[:user_confirmed_password] %>
+<%= "Your password and confirm password do not match"%>
+<%end %>
+<%else%>
+<p> Here's for the crazy one, the misfit, the round pegs in square hole</p>
+<%end%>
+
+
+<form action="/signup/create" method="POST" class="sign_up_form">
+        <section> Welcome to forcelinker, please fill up: </section>
+        <Label>Username that show on forcelinker </Label>
+        
+        <input type="text" name="user_name">
+        <Label>Your Email address</Label>
+        <input type="text" name="user_email">
+        <Label>Your password</Label>
+        <input type="password" name="user_password">
+        <Label>Please confirm your password</Label>
+        <input type="password" name="user_confirmed_password">
+
+     <button>Submit</button>
+     </form> 
