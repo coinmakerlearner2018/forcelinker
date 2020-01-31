@@ -2,21 +2,22 @@
 <h1> Log in </h1>
 
 <%# You  can create session %>
+<%#    %>
 
 <form action="/login" method="post">
     <label for="">email</label>
-    <input type="text" name="email">
+    <input type="text" name="user_email">
 
     <%# hacker can intecep wifi getting below text %>
     <%# paddlock %>
     <%# Browser must not comprimise %>
     <label for="">password</label>
     <input type="password" name="password">
-
-
     <button>Submit</button>
 </form>
 
+
+    
     <h4>or Create New Account </h4>
 
     <form action="/signup/create" method="POST" class="sign_up_form">

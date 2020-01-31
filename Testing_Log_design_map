@@ -10,11 +10,50 @@ Design & building  log
 - Logout button -> Condition -> only when session exists 
 
 - build login 
+      a. Login -> you can use user_email or user_name to logged in
+
+
 
 =======Issues
+    Major issues
 
 
 
+    Minor issues
+    - How to set psql query Ailas?
+
+    - How to send request without showing id?(done)
+
+    - Catch date exception-> date start date finish must not precedent
+
+-------Please fix the username-----------
+
+
+    - In sign up route, my is exist function may be wrong
+    raise the inspect, see whether the return value is what I want.
+
+  ------------
+   change to is_exist? -> change to return true/false
+    check_user_name_exist 
+     check_user_email_exist
+
+
+    -> What does result giving back?(done) 
+  --------------  -> give back zero 
+    test = "skjfhkjsdhj"
+
+    sql = "select * from users where user_email = $1;"
+    result = run_sql(sql, [test])
+
+    puts result.count
+    ----------------
+    User log book track user every action on web
+
+
+    
+
+
+===========
 
 
 Testing log  
